@@ -1,3 +1,18 @@
+function redirectToWhatsapp() {
+  const phoneNumber = '+918920898168';
+  const message = encodeURIComponent("Hi, I'm interested in learning more about your automation system.");
+
+  // Open WhatsApp in a new tab with a pre-filled message
+  window.open('https://wa.me/' + phoneNumber + '?text=' + message, '_blank');
+}
+
+function redirectToEmail() {
+  // Replace 'YOUR_EMAIL_ADDRESS' with your actual email address
+  const email = 'mailto:hello@feelsafemarkone.com';
+
+  // Open email client in a new tab
+  window.open(email);
+}
 function startCountdownTimer() {
     // Predefined scheduled times (hours and minutes)
     const scheduledTimes = [
@@ -77,65 +92,76 @@ function startCountdownTimer() {
     updateTimer();
 }
 startCountdownTimer();
-function formModalTimer(){
-    document
-        .getElementById("quoteForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert("Quote requested successfully!");
-          // Here, insert your form logic or AJAX call
-        });
-        const modal = document.getElementById("popup-form");
-        const closeBtn = document.querySelector(".close-btn");
-      
-        // Open modal after given seconds
-        [5000, 10000, 20000].forEach(delay => {
-          setTimeout(() => {
-            modal.style.display = "block";
-          }, delay);
-        });
-      
-        // Close button click
-        closeBtn.onclick = () => {
-          modal.style.display = "none";
-        };
-      
-        // Click outside modal to close
-        window.onclick = (event) => {
-          if (event.target === modal) {
-            modal.style.display = "none";
-          }
-        };
+
+function formModalTimer() {
+  const modal = document.getElementById("popup-form");
+  const closeBtn = document.querySelector(".close-btn");
+
+  let openCount = 0;
+  const baseDelay = 8000; // Delay increment in ms
+  const initialDelay = 5000; // First delay in ms
+
+  // Show modal after a specific delay
+  function scheduleModal(delay) {
+    setTimeout(() => {
+      modal.style.display = "block";
+      openCount++;
+    }, delay);
+  }
+
+  // First show after 5 seconds
+  scheduleModal(initialDelay);
+
+  // Close handler
+  function handleClose() {
+    modal.style.display = "none";
+
+    // Schedule next modal with increasing delay
+    if (openCount < 5) {
+      const nextDelay = baseDelay * openCount;
+      scheduleModal(nextDelay);
+    }
+  }
+
+  // Button click close
+  closeBtn.onclick = handleClose;
+
+  // Click outside modal to close
+  window.onclick = (event) => {
+    if (event.target === modal) {
+      handleClose();
+    }
+  };
 }
-// formModalTimer();
+window.onload = formModalTimer;
 
 const openChat = () => {
     const modal = document.getElementById("popup-form");
     modal.style.display = "block";
 };
-const questions = [
-    {
-      text: "✅ 24/7 Lead Capture & Automated Follow-Up",
-      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20more%20customers.`,
-    },
-    {
-      text: "✅ Online Appointment Scheduling",
-      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20keep%20my%20clients%20longer.`,
-    },
-    {
-      text: "✅ Reputation & Review Management",
-      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20scale%20my%20business.`,
-    },
-    {
-      text: "✅ Patient Re-Engagement",
-      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20improve%20my%20sales%20performance.`,
-    },
 
-    {
-      text: "✅ Real-Time Tracking for Clinic Owners",
-      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20increase%20customer%20engagement.`,
-    },
-    ];
+const questions = [
+  {
+    text: "Lead Capture & Automated Follow-Up",
+    whatsappLink: `https://wa.me/+918920898168?text=I%20want%20more%20customers.`,
+  },
+  {
+    text: "Online Appointment Scheduling",
+    whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20keep%20my%20clients%20longer.`,
+  },
+  {
+    text: "Reputation & Review Management",
+    whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20scale%20my%20business.`,
+  },
+  {
+    text: "Re-Engagement Campaigns",
+    whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20improve%20my%20sales%20performance.`,
+  },
+  {
+    text: "Real-Time Customer Tracking",
+    whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20increase%20customer%20engagement.`,
+  },
+];;
   
 
 let selectedQuestion = null;
@@ -170,4 +196,10 @@ window.addEventListener('scroll', () => {
 });
 
 // aman
-  
+function changeColor () {
+    var ctaButton = document.getElementById("cta-button");
+    setInterval(() => {
+      ctaButton.classList.toggle("blue-bg");
+    },1000)
+}
+changeColor();

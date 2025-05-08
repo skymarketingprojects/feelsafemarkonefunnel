@@ -174,6 +174,9 @@ body {
   font-weight: 600;
   background-color: var(--yellow-color);
 }
+.blue-bg {
+  background-color: var(--blue-color);
+}
 .timer-container {
   display: flex;
   align-items: center;
@@ -382,6 +385,9 @@ body {
 }
 /* icon card section ends */
 .pricing-section {
+  padding: 40px 20px;
+}
+.pricing-container {
   gap: 30px;
   padding: 40px 20px;
   max-width: 900px;
@@ -389,23 +395,39 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.pricing-section2 {
-  max-width: 900px;
-  margin: 0px auto;
-  display: grid;
+.pricing-container2 {
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  padding: 40px 20px;
 }
 .pricing-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.results-text {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.get-started-text {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 .pricing-image {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+.pricing-image2 {
+  height: 190px;
+  width: auto;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
 .footer {
   text-align: center;
   font-size: 12px;
@@ -427,15 +449,21 @@ body {
 }
 
 .pricing-box {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   border: 2px solid var(--green-color);
   padding: 0;
+  position: relative;
+}
+.btn-row {
+  bottom: 0;
 }
 
 .pricing-box h3 {
   text-align: center;
   font-size: 18px;
-  background: #fdd835;
+  background: var(--yellow-color);
   padding: 8px 0px;
 }
 
@@ -491,6 +519,7 @@ body {
   padding: 10px 0;
   font-weight: bold;
   width: 100%;
+  font-size: 1.5em;
 }
 .download-btn:hover {
   background: #388e3c;
@@ -545,7 +574,6 @@ body {
   border-radius: 10px;
   width: 80vw;
   max-width: 500px;
-  height: 60vh;
   position: relative;
   text-align: center;
 }
@@ -792,4 +820,30 @@ body {
   .capture-container {
     grid-template-columns: 1fr;
   }
+}
+.btn-row {
+  margin-top: 50px;
+}
+
+.client-site-section {
+  padding: 20px 0px;
+  display: grid;
+  gap: 20px;
+  background-color: var(--primary-bg);
+}
+.client-site-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+.client-site-image {
+  margin: auto;
+}
+.client-site-link {
+  padding-bottom: 2px;
+  text-decoration: underline;
+  color: var(--blue-color);
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
 }

@@ -15,17 +15,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="header">
+    <section class="header">
       Get 0 Cost Marketing Solution 🚀 (No Ads | No Paid Leads, Just Results)
-    </div>
+    </section>
 
-    <div class="sub-header">
+    <section class="sub-header">
       📢 Every Month We are helping
       <span class="highlight">56+ Business to Save</span> Marketing Cost in Just
       3 Month 📈
-    </div>
+    </section>
 
-    <div class="container">
+    <section class="container">
       <div class="left">
         <div class="socialIconBorder">
           <h2 class="ctaHead">
@@ -42,7 +42,9 @@
           <img src="/images//meta.png" alt="emai" class="socialIcon meta" />
           <img src="/images///wtsp.png" alt="emai" class="socialIcon wtsp" />
         </div>
-        <button class="btn">🌟 START TODAY & GET 20% OFF 🌟</button>
+        <button onclick="redirectToWhatsapp()" class="btn">
+          🌟 START TODAY & GET 20% OFF 🌟
+        </button>
         <div class="tagline">Trusted by Thousands of Top-Rated Businesses</div>
         <p class="highleveltext">Powered by Highlevel</p>
         <div class="rating-container">
@@ -82,25 +84,24 @@
           <select class="form-input" name="services" id="services" required>
             <option value="">Select Services</option>
             <option value="lead">
-              <strong>Smart Lead Starter</strong>:
-              <p class="option-text">
-                Simple automation to get daily leads without manual work.
-              </p>
+              <strong>Smart Lead Starter</strong>
             </option>
             <option value="sales">
-              <strong>AI-Powered Lead Booster</strong>: Capture, nurture &
-              convert leads faster using AI and automation.
+              <strong>AI-Powered Lead Booster</strong>
             </option>
             <option value="both">
-              <strong>360° Sales Pro System</strong>: End-to-end lead to sales
-              automation, staff tracking & business reports.
+              <strong>360° Sales Pro System</strong>
             </option>
           </select>
           <button type="submit" class="submit-btn">Get Free Quote</button>
         </form>
         <div class="tagline">Lead Generate → Nurture → Convert</div>
         <div class="form-cta-text-container">
-          <button class="cta-button">
+          <button
+            onclick="redirectToWhatsapp()"
+            id="cta-button"
+            class="cta-button blue-bg"
+          >
             ✅ Complete Lead & Sales Management Solution
           </button>
         </div>
@@ -110,7 +111,7 @@
         </div>
         <div class="offer-discount">👉 20% off👈</div>
       </div>
-    </div>
+    </section>
 
     <section class="capture-section">
       <div class="capture-container">
@@ -157,7 +158,9 @@
             alt="Landing Pages Preview"
             class="capture-image"
           />
-          <button class="trial-btn">🚀 Buy Now</button>
+          <button onclick="redirectToWhatsapp()" class="trial-btn">
+            🚀 Buy Now
+          </button>
           <p class="trial-note">
             No obligation, no contracts, cancel at any time.
           </p>
@@ -173,7 +176,9 @@
             alt="Landing Pages Preview"
             class="capture-image"
           />
-          <button class="trial-btn">🚀 Buy Now</button>
+          <button onclick="redirectToWhatsapp()" class="trial-btn">
+            🚀 Buy Now
+          </button>
           <p class="trial-note">
             No obligation, no contracts, cancel at any time.
           </p>
@@ -248,7 +253,9 @@
             alt="Landing Pages Preview"
             class="capture-image"
           />
-          <button class="trial-btn">🚀 Buy Now</button>
+          <button onclick="redirectToWhatsapp()" class="trial-btn">
+            🚀 Buy Now
+          </button>
           <p class="trial-note">
             No obligation, no contracts, cancel at any time.
           </p>
@@ -320,90 +327,151 @@
     </section>
 
     <section class="pricing-section">
-      <div class="pricing-box">
-        <h3>Start Digital Growth</h3>
-        <div class="pricing-header">
-          <h4>Starter Automation Pack</h4>
-          <p>One-time payment: <strong>₹8000 + gst</strong></p>
-          <span class="badge">✅ No Hidden Charges ✅</span>
+      <h3 onclick="redirectToWhatsapp()" class="section-title">
+        👉Get Set Automate👈
+      </h3>
+      <div class="pricing-container">
+        <div class="pricing-box">
+          <h3>Start Digital Growth</h3>
+          <div class="pricing-header">
+            <h4>Starter Automation Pack</h4>
+            <p>One-time payment: <strong>₹8000 + gst</strong></p>
+            <p>
+              <strong>On-Going Maintainance</strong>: 20% of Subscription + gst
+              P/M
+            </p>
+            <span class="badge">✅ No Hidden Charges ✅</span>
+          </div>
+          <ul class="features">
+            <li>✅ Lead Generating Website</li>
+            <li>✅ WhatsApp Integration</li>
+            <li>✅ Basic Chat Bot Integration</li>
+            <li>✅ Sales Optimize Copywriting</li>
+            <li>✅ Appointment Booking link</li>
+            <li>✅ Autopopup Lead Gen Form</li>
+            <li>✅ Offer Image</li>
+            <li>✅ News Headline Row</li>
+            <li>✅ Thankyou Message and Mail</li>
+            <li>✅ Chat Support</li>
+            <li>✅ Final Report</li>
+          </ul>
+          <a href="#" class="download-btn">⬇ Watch Demo</a>
+          <button onclick="redirectToWhatsapp()" class="buy-now-btn">
+            ✅ Buy Now✅
+          </button>
         </div>
-        <ul class="features">
-          <li>✅ Lead Generating Website</li>
-          <li>✅ WhatsApp Integration</li>
-          <li>✅ Basic Chat Bot Integration</li>
-          <li>✅ Sales Optimize Copywriting</li>
-          <li>✅ Appointment Booking link</li>
-          <li>✅ Autopopup Lead Gen Form</li>
-          <li>✅ Offer Image</li>
-          <li>✅ News Headline Row</li>
-          <li>✅ Thankyou Message and Mail</li>
-          <li>✅ Chat Support</li>
-          <li>✅ Final Report</li>
-        </ul>
-        <a href="#" class="download-btn">⬇ DOWNLOAD DEMO</a>
-        <button class="buy-now-btn">✅ Buy Now✅</button>
-      </div>
 
-      <div class="pricing-box">
-        <h3>Most Selling (400+ buyer)</h3>
-        <div class="pricing-header green">
-          <h4>Growth Automation Suite</h4>
-          <p>One-time payment: <strong>₹23999 + gst</strong> (for 3 months)</p>
-          <p>On-Going Maintenance : <strong>₹5K + gst / PM</strong></p>
-          <span class="badge">✅ No Hidden Charges ✅</span>
+        <div class="pricing-box">
+          <h3>Most Selling (400+ buyer)</h3>
+          <div class="pricing-header green">
+            <h4>Growth Automation Suite</h4>
+            <p>
+              One-time payment: <strong>₹23999 + gst</strong> (for 3 months)
+            </p>
+            <p>
+              <strong>On-Going Maintainance</strong>: 20% of Subscription + gst
+              P/M
+            </p>
+            <span class="badge">✅ No Hidden Charges ✅</span>
+          </div>
+          <ul class="features">
+            <li>✅ Starter Automation Pack +</li>
+            <li>✅ 2 Lead Generation Websites</li>
+            <li>✅ Lead Scoring, Nurturing & Reactivation</li>
+            <li>✅ CRM with Pipelines & Smart Reminders</li>
+            <li>✅ Automated Email/SMS Sequences</li>
+            <li>✅ WhatsApp API Integration</li>
+            <li>✅ 24/7 Auto-Reply Chatbot</li>
+            <li>✅ Sales Dashboard & Tracking</li>
+            <li>✅ Dedicated Support</li>
+            <li>✅ Final Performance Report</li>
+          </ul>
+          <div class="btn-row">
+            <a href="#" class="download-btn">⬇ Watch Demo</a>
+            <button onclick="redirectToWhatsapp()" class="buy-now-btn">
+              ✅ Buy Now✅
+            </button>
+          </div>
         </div>
-        <ul class="features">
-          <li>✅ Starter Automation Pack +</li>
-          <li>✅ 2 Lead Generation Websites</li>
-          <li>✅ Lead Scoring, Nurturing & Reactivation</li>
-          <li>✅ CRM with Pipelines & Smart Reminders</li>
-          <li>✅ Automated Email/SMS Sequences</li>
-          <li>✅ WhatsApp API Integration</li>
-          <li>✅ 24/7 Auto-Reply Chatbot</li>
-          <li>✅ Sales Dashboard & Tracking</li>
-          <li>✅ Dedicated Support</li>
-          <li>✅ Final Performance Report</li>
-        </ul>
-        <a href="#" class="download-btn">⬇ DOWNLOAD DEMO</a>
-        <button class="buy-now-btn">✅ Buy Now✅</button>
       </div>
     </section>
 
     <section class="pricing-section2">
-      <div class="pricing-box">
-        <h3>Start Digital Growth</h3>
-        <div class="pricing-header">
-          <h4>Starter Automation Pack</h4>
-          <p>One-time payment: <strong>₹8000 + gst</strong></p>
-          <span class="badge">✅ No Hidden Charges ✅</span>
+      <div class="pricing-container pricing-container2">
+        <div class="pricing-box">
+          <h3>Save more money then Ever</h3>
+          <div class="pricing-header">
+            <h4>Enterprise Automation System</h4>
+            <p>One-time payment: <strong>₹ 50K + gst for (3 month)</strong></p>
+            <p><strong>On-Going Maintainance:</strong> ₹ 10K + gst P/M</p>
+            <span class="badge">✅ No Hidden Charges ✅</span>
+          </div>
+          <ul class="features">
+            <li>✅ All Growth Features Included + Ai</li>
+            <li>
+              ✅ 3 Lead-Generating Websites – Built to convert with speed & SEO
+            </li>
+            <li>✅ Auto-Invoicing, Client Onboarding & Renewal Automation</li>
+            <li>✅ Staff Activity Tracking + Performance Dashboards</li>
+            <li>✅ Custom Dashboards & SOP Documentation</li>
+            <li>✅ 24/7 Auto-Reply Chatbot – Never miss a lead</li>
+            <li>✅ Automated Follow-ups, Reminders & Offer Campaigns</li>
+            <li>
+              ✅ WhatsApp API Integration – Instant customer communication
+            </li>
+            <li>✅ Sales Management Dashboard – Track, convert & scale</li>
+            <li>✅ Monthly Performance Report</li>
+            <li>✅ Dedicated Support Team – We’re with you, always</li>
+          </ul>
+          <div class="btn-row">
+            <a href="#" class="download-btn">⬇ Watch DEMO</a>
+            <button onclick="redirectToWhatsapp()" class="buy-now-btn">
+              ✅ Buy Now✅
+            </button>
+          </div>
         </div>
-        <ul class="features">
-          <li>✅ Lead Generating Website</li>
-          <li>✅ WhatsApp Integration</li>
-          <li>✅ Basic Chat Bot Integration</li>
-          <li>✅ Sales Optimize Copywriting</li>
-          <li>✅ Appointment Booking link</li>
-          <li>✅ Autopopup Lead Gen Form</li>
-          <li>✅ Offer Image</li>
-          <li>✅ News Headline Row</li>
-          <li>✅ Thankyou Message and Mail</li>
-          <li>✅ Chat Support</li>
-          <li>✅ Final Report</li>
-        </ul>
-        <a href="#" class="download-btn">⬇ DOWNLOAD DEMO</a>
-        <button class="buy-now-btn">✅ Buy Now✅</button>
-      </div>
-      <div class="pricing-image-container">
-        <img src="/images//1.png" alt="vertica" class="pricing-image" />
+        <div class="pricing-image-container">
+          <h5 class="get-started-text">🚀 Get Started Now</h5>
+          <p class="results-text">See the results we have given</p>
+
+          <img
+            src="/images//result.png"
+            alt="vertical"
+            class="pricing-image2"
+          />
+          <img
+            src="/images//leadsss.png"
+            alt="vertical"
+            class="pricing-image"
+          />
+          <button>
+            <button onclick="redirectToWhatsapp()" href="#" class="trial-btn">
+              ⬇ Connect Now✅
+            </button>
+          </button>
+        </div>
       </div>
     </section>
-    <div style="height: 60px"></div>
+
+    <secton class="client-site-section">
+      <h3 class="client-site-title">👇 Check out our client sites</h3>
+      <img class="client-site-image" src="/images//client-site.jpeg" alt="" />
+      <a
+        class="client-site-link"
+        href="https://hightechwindowblinds.com/"
+        target="_blank"
+      >
+        👉 Visit Live site here
+      </a>
+    </secton>
+
+    <div style="height: 120px"></div>
 
     <!-- pop up form -->
     <div id="popup-form" class="modal">
       <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h3 class="modal-title">Get Free Quote</h3>
+        <h3 class="modal-title">Get Set Automate</h3>
         <form
           id="quoteForm"
           class="modal-form"
@@ -434,18 +502,13 @@
           <select class="form-input" name="services" id="services" required>
             <option value="">Select Services</option>
             <option value="lead">
-              <strong>Smart Lead Starter</strong>:
-              <p class="option-text">
-                Simple automation to get daily leads without manual work.
-              </p>
+              <strong>Smart Lead Starter</strong>
             </option>
             <option value="sales">
-              <strong>AI-Powered Lead Booster</strong>: Capture, nurture &
-              convert leads faster using AI and automation.
+              <strong>AI-Powered Lead Booster</strong>
             </option>
             <option value="both">
-              <strong>360° Sales Pro System</strong>: End-to-end lead to sales
-              automation, staff tracking & business reports.
+              <strong>360° Sales Pro System</strong>
             </option>
           </select>
           <button type="submit" class="btn">Get Free Quote</button>
@@ -461,7 +524,7 @@
       </div>
       <div id="questionsContainer">
         <button class="questionButton" onclick="handleQuestionClick(0)">
-          24/7 Lead Capture & Automated Follow-Up
+          Lead Capture & Automated Follow-Up
         </button>
         <button class="questionButton" onclick="handleQuestionClick(1)">
           Online Appointment Scheduling
@@ -470,10 +533,10 @@
           Reputation & Review Management
         </button>
         <button class="questionButton" onclick="handleQuestionClick(3)">
-          Patient Re-Engagement
+          Re-Engagement Campaigns
         </button>
         <button class="questionButton" onclick="handleQuestionClick(4)">
-          Real-Time Tracking for Clinic Owners
+          Real-Time Customer Tracking
         </button>
       </div>
     </div>
@@ -488,7 +551,7 @@
       <img src="/images//whatsappIcon.png" alt="WhatsApp Chat" />
     </a>
     <a
-      href="https://wa.me/+918920898168"
+      href="mailto:hello@feelsafemarkone.com"
       class="whatsapp-float email-icon"
       target="_blank"
       title="Chat on WhatsApp"
@@ -503,7 +566,7 @@
     <!-- bottom cta -->
     <div id="bottom-cta">
       <p>🚀 Ready to Transform Your Business?</p>
-      <a href="#popup-form" class="cta-btn">Get Started</a>
+      <a onclick="redirectToWhatsapp()" class="cta-btn">Get set Automate!</a>
     </div>
     <!--
     <footer class="site-footer">
