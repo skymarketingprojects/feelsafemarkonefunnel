@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketing Automation Platform</title>
+    <title>Marketing Automation Platform | feelsafemarkone</title>
+    <meta
+      name="description"
+      content="Get 0 Cost Marketing Solution 🚀 (No Ads | No Paid Leads, Just Results)"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
@@ -11,17 +15,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <a
-      href="https://wa.me/+918920898168"
-      class="whatsapp-float"
-      target="_blank"
-      title="Chat on WhatsApp"
-    >
-      <img src="/images//whatsappIcon.png" alt="WhatsApp Chat" />
-    </a>
     <div class="header">
       Get 0 Cost Marketing Solution 🚀 (No Ads | No Paid Leads, Just Results)
     </div>
+
     <div class="sub-header">
       📢 Every Month We are helping
       <span class="highlight">56+ Business to Save</span> Marketing Cost in Just
@@ -50,32 +47,55 @@
         <p class="highleveltext">Powered by Highlevel</p>
         <div class="rating-container">
           <img src="/images//google.png" alt="google" class="google" />
+          <span>4.9+ </span>
           <div class="star-rating">⭐⭐⭐⭐⭐</div>
         </div>
       </div>
 
       <div class="right">
         <form id="quoteForm">
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="text" name="company" placeholder="Company" required />
-          <input type="tel" name="phone" placeholder="Phone" required />
           <input
+            class="form-input"
             type="text"
-            name="services"
-            placeholder="Product / Services"
+            name="name"
+            placeholder="Name"
             required
           />
-          <button type="submit" class="btn">Get Free Quote</button>
+          <input
+            class="form-input"
+            type="text"
+            name="company"
+            placeholder="Company"
+            required
+          />
+          <input
+            class="form-input"
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            required
+          />
+          <select class="form-input" name="services" required>
+            <option value="">Select Services</option>
+            <option value="lead">Lead Generation</option>
+            <option value="sales">Sales Automation</option>
+            <option value="both">Both</option>
+          </select>
+          <button type="submit" class="submit-btn">Get Free Quote</button>
         </form>
-        <div class="tagline">Lead Generate → Nurture → Close</div>
-        <div style="margin-top: 8px">
-          <button class="btn" style="background: #ffc107; color: black">
+        <div class="tagline">Lead Generate → Nurture → Convert</div>
+        <div class="form-cta-text-container">
+          <button class="cta-button">
             ✅ Complete Lead & Sales Management Solution
           </button>
         </div>
+        <div class="timer-container">
+          <p class="expires-in-text">Offer expires in -</p>
+          <p id="timer" class="timer">00:00:00</p>
+        </div>
       </div>
     </div>
-
+    <!--
     <section class="capture-section">
       <div class="capture-container">
         <div class="capture-left">
@@ -323,16 +343,90 @@
           <a href="#">Contact</a>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
-    <script>
-      document
-        .getElementById("quoteForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert("Quote requested successfully!");
-          // Here, insert your form logic or AJAX call
-        });
-    </script>
+    <!-- pop up form -->
+    <!-- <div id="popup-form" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3 class="modal-title">Get Free Quote</h3>
+        <form id="quoteForm" class="modal-form">
+          <input
+            class="modal-input"
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            class="modal-input"
+            type="text"
+            name="company"
+            placeholder="Company"
+            required
+          />
+          <input
+            class="modal-input"
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            required
+          />
+          <select class="modal-input" name="services" required>
+            <option value="">Select Services</option>
+            <option value="lead">Lead Generation</option>
+            <option value="sales">Sales Automation</option>
+            <option value="both">Both</option>
+          </select>
+          <button type="submit" class="btn">Get Free Quote</button>
+        </form>
+      </div>
+    </div> -->
+
+    <!-- chat-bot-icon -->
+    <!-- <div id="chatContainer">
+      <div id="chatHeader">
+        <h3>How can we help you?</h3>
+        <button id="closeButton">×</button>
+      </div>
+      <div id="questionsContainer">
+        <button class="questionButton" onclick="handleQuestionClick(0)">
+          Find Lowest Price Here.
+        </button>
+        <button class="questionButton" onclick="handleQuestionClick(1)">
+          PAN India Delivery.
+        </button>
+        <button class="questionButton" onclick="handleQuestionClick(2)">
+          We Have Customized Options.
+        </button>
+        <button class="questionButton" onclick="handleQuestionClick(3)">
+          All Types of Blinds Available.
+        </button>
+        <button class="questionButton" onclick="handleQuestionClick(4)">
+          100% Free Return, No Questions Asked ?
+        </button>
+        <button class="questionButton" onclick="handleQuestionClick(5)">
+          Talk to Sales Team.
+        </button>
+      </div>
+    </div> -->
+
+    <!-- bottom cta -->
+    <!-- <div id="bottom-cta">
+      <p>🚀 Start Your Marketing Automation Today!</p>
+      <a href="#popup-form" class="cta-btn">Get Free Quote</a>
+    </div> -->
+
+    <!-- whatsapp icon -->
+    <!-- <a
+      href="https://wa.me/+918920898168"
+      class="whatsapp-float"
+      target="_blank"
+      title="Chat on WhatsApp"
+    >
+      <img src="/images//whatsappIcon.png" alt="WhatsApp Chat" />
+    </a> -->
+
+    <script src="script.js"></script>
   </body>
 </html>
