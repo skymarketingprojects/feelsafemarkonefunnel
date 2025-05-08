@@ -77,7 +77,8 @@ function startCountdownTimer() {
     updateTimer();
 }
 startCountdownTimer();
-document
+function formModalTimer(){
+    document
         .getElementById("quoteForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
@@ -105,36 +106,56 @@ document
             modal.style.display = "none";
           }
         };
+}
+formModalTimer();
+
 const openChat = () => {
     const modal = document.getElementById("popup-form");
     modal.style.display = "block";
 };
 const questions = [
     {
-        text: "Find Lowest Price Here.",
-        whatsappLink: "https://wa.me/+91<your-phone-number>?text=I%20would%20like%20to%20know%20the%20lowest%20price."
+      text: "Do you want more customers?",
+      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20more%20customers.`,
     },
     {
-        text: "PAN India Delivery.",
-        whatsappLink: "https://wa.me/+91<your-phone-number>?text=Do%20you%20offer%20PAN%20India%20delivery%3F"
+      text: "Do you want to keep your clients longer?",
+      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20keep%20my%20clients%20longer.`,
     },
     {
-        text: "We Have Customized Options.",
-        whatsappLink: "https://wa.me/+91<your-phone-number>?text=Do%20you%20offer%20customized%20blinds%20options%3F"
+      text: "Do you want to scale your business?",
+      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20scale%20my%20business.`,
     },
     {
-        text: "All Types of Blinds Available.",
-        whatsappLink: "https://wa.me/+91<your-phone-number>?text=What%20types%20of%20blinds%20are%20available%3F"
+      text: "Would you like to improve your sales performance?",
+      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20improve%20my%20sales%20performance.`,
     },
     {
-        text: "100% Free Return, No Questions Asked ?",
-        whatsappLink: "https://wa.me/+91<your-phone-number>?text=Can%20you%20explain%20your%20return%20policy%3F"
+      text: "Want to automate your marketing efforts?",
+      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20automate%20my%20marketing.`,
     },
     {
-        text: "Talk to Sales Team.",
-        whatsappLink: "https://wa.me/+91<your-phone-number>?text=I%20would%20like%20to%20talk%20to%20the%20sales%20team."
-    }
-];
+      text: "Looking for better customer engagement?",
+      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20increase%20customer%20engagement.`,
+    },
+    {
+      text: "Need help with tracking leads and sales?",
+      whatsappLink: `https://wa.me/+918920898168?text=I%20need%20help%20with%20tracking%20leads%20and%20sales.`,
+    },
+    {
+      text: "Want to improve your conversion rates?",
+      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20improve%20my%20conversion%20rates.`,
+    },
+    {
+      text: "Looking for more efficient sales funnels?",
+      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20more%20efficient%20sales%20funnels.`,
+    },
+    {
+      text: "Interested in automating customer service?",
+      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20automate%20customer%20service.`,
+    },
+    ];
+  
 
 let selectedQuestion = null;
 
@@ -164,5 +185,5 @@ window.addEventListener('scroll', () => {
     ctaBar.classList.remove('show');
   }
 
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
 });
