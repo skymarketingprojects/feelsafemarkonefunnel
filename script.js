@@ -107,7 +107,7 @@ function formModalTimer(){
           }
         };
 }
-formModalTimer();
+// formModalTimer();
 
 const openChat = () => {
     const modal = document.getElementById("popup-form");
@@ -115,44 +115,25 @@ const openChat = () => {
 };
 const questions = [
     {
-      text: "Do you want more customers?",
+      text: "✅ 24/7 Lead Capture & Automated Follow-Up",
       whatsappLink: `https://wa.me/+918920898168?text=I%20want%20more%20customers.`,
     },
     {
-      text: "Do you want to keep your clients longer?",
+      text: "✅ Online Appointment Scheduling",
       whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20keep%20my%20clients%20longer.`,
     },
     {
-      text: "Do you want to scale your business?",
+      text: "✅ Reputation & Review Management",
       whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20scale%20my%20business.`,
     },
     {
-      text: "Would you like to improve your sales performance?",
+      text: "✅ Patient Re-Engagement",
       whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20improve%20my%20sales%20performance.`,
     },
+
     {
-      text: "Want to automate your marketing efforts?",
-      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20automate%20my%20marketing.`,
-    },
-    {
-      text: "Looking for better customer engagement?",
+      text: "✅ Real-Time Tracking for Clinic Owners",
       whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20increase%20customer%20engagement.`,
-    },
-    {
-      text: "Need help with tracking leads and sales?",
-      whatsappLink: `https://wa.me/+918920898168?text=I%20need%20help%20with%20tracking%20leads%20and%20sales.`,
-    },
-    {
-      text: "Want to improve your conversion rates?",
-      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20improve%20my%20conversion%20rates.`,
-    },
-    {
-      text: "Looking for more efficient sales funnels?",
-      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20more%20efficient%20sales%20funnels.`,
-    },
-    {
-      text: "Interested in automating customer service?",
-      whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20automate%20customer%20service.`,
     },
     ];
   
