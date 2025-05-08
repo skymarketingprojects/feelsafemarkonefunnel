@@ -60,7 +60,8 @@ body {
   gap: 80px;
 }
 .left {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 .right {
@@ -727,7 +728,7 @@ body {
   padding: 25px 0px;
   z-index: 9999;
   transition: transform 0.3s ease-in-out;
-  transform: translateY(100%); /* hidden by default */
+  transform: translateY(100%);
 }
 
 #bottom-cta.show {
