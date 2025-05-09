@@ -721,7 +721,7 @@ body {
     max-width: 300px;
     right: 50%;
     transform: translateX(50%);
-    bottom: 10px;
+    bottom: 90px;
   }
 
   .questionButton {
@@ -776,7 +776,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .pricing-section {
+  .pricing-container {
     grid-template-columns: 1fr;
   }
   .pricing-section2 {
@@ -815,6 +815,7 @@ body {
   }
   .container {
     width: 90%;
+    gap: 5px;
     grid-template-columns: 1fr;
   }
   .left {
@@ -825,6 +826,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 .btn-row {
   margin-top: 50px;
 }
@@ -835,14 +837,18 @@ body {
   gap: 20px;
   background-color: var(--primary-bg);
 }
+
 .client-site-title {
   text-align: center;
   font-size: 2em;
   font-weight: bold;
 }
+
 .client-site-image {
   margin: auto;
+  max-width: 90%;
 }
+
 .client-site-link {
   padding-bottom: 2px;
   text-decoration: underline;
