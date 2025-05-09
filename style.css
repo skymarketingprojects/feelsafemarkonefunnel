@@ -814,7 +814,7 @@ body {
     font-size: 14px;
   }
   .container {
-    width: 90%;
+    width: 85%;
     gap: 5px;
     grid-template-columns: 1fr;
   }
@@ -824,6 +824,22 @@ body {
   }
   .capture-container {
     grid-template-columns: 1fr;
+  }
+  .sub-header {
+    padding: 0.5px 5px;
+  }
+
+  .pricing-image-container {
+    margin: 0px auto;
+    max-width: 100%;
+  }
+  .pricing-image2 {
+    margin: 0px auto;
+    max-width: 99%;
+  }
+  .client-site-title {
+    font-size: 0.9em;
+    padding: 0px 10px;
   }
 }
 

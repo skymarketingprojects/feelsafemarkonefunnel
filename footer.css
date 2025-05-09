@@ -197,4 +197,7 @@
   .termsContainer {
     gap: 10px;
   }
+  .bottomBar {
+    gap: 5px;
+  }
 }
