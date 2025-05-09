@@ -143,23 +143,23 @@ const openChat = () => {
 const questions = [
   {
     text: "Lead Capture & Automated Follow-Up",
-    whatsappLink: `https://wa.me/+918920898168?text=I%20want%20more%20customers.`,
+    whatsappLink: `https://wa.me/+918920898168?text=${encodeURIComponent('I want more customers.')}`,
   },
   {
     text: "Online Appointment Scheduling",
-    whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20keep%20my%20clients%20longer.`,
+    whatsappLink: `https://wa.me/+918920898168?text=${encodeURIComponent('I want to keep my clients longer.')}`,
   },
   {
     text: "Reputation & Review Management",
-    whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20scale%20my%20business.`,
+    whatsappLink: `https://wa.me/+918920898168?text=${encodeURIComponent('I want to scale my business.')}`,
   },
   {
     text: "Re-Engagement Campaigns",
-    whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20improve%20my%20sales%20performance.`,
+    whatsappLink: `https://wa.me/+918920898168?text=${encodeURIComponent('I want to improve my sales performance.')}`,
   },
   {
     text: "Real-Time Customer Tracking",
-    whatsappLink: `https://wa.me/+918920898168?text=I%20want%20to%20increase%20customer%20engagement.`,
+    whatsappLink: `https://wa.me/+918920898168?text=${encodeURIComponent('I want to increase customer engagement.')}`,
   },
 ];;
   
@@ -203,3 +203,21 @@ function changeColor () {
     },1000)
 }
 changeColor();
+
+
+// open video modal
+function openVideoModal(videoUrl) {
+
+  const embedUrl = `https://www.youtube.com/embed/${videoUrl}`;
+
+  // Set the iframe source to the embed URL
+  document.getElementById('video-frame').src = embedUrl;
+
+  // Show the modal
+  document.getElementById('video-modal').style.display = 'flex';
+}
+
+function closeVideoModal() {
+  document.getElementById('video-modal').style.display = 'none';
+  document.getElementById('video-frame').src = '';
+}

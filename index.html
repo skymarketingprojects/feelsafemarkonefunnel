@@ -81,15 +81,23 @@
             placeholder="Phone"
             required
           />
+          <input
+            class="form-input"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+
           <select class="form-input" name="services" id="services" required>
             <option value="">Select Services</option>
-            <option value="lead">
+            <option value="Smart Lead Starter">
               <strong>Smart Lead Starter</strong>
             </option>
-            <option value="sales">
+            <option value="AI-Powered Lead Booster">
               <strong>AI-Powered Lead Booster</strong>
             </option>
-            <option value="both">
+            <option value="360° Sales Pro System">
               <strong>360° Sales Pro System</strong>
             </option>
           </select>
@@ -355,10 +363,17 @@
             <li>✅ Chat Support</li>
             <li>✅ Final Report</li>
           </ul>
-          <a href="#" class="download-btn">⬇ Watch Demo</a>
-          <button onclick="redirectToWhatsapp()" class="buy-now-btn">
-            ✅ Buy Now✅
-          </button>
+          <div class="btn-row">
+            <button
+              class="watch-demo-btn"
+              onclick="openVideoModal('Y_z6BenIxvY')"
+            >
+              ⬇ Watch Demo
+            </button>
+            <button onclick="redirectToWhatsapp()" class="buy-now-btn">
+              ✅ Buy Now✅
+            </button>
+          </div>
         </div>
 
         <div class="pricing-box">
@@ -387,7 +402,12 @@
             <li>✅ Final Performance Report</li>
           </ul>
           <div class="btn-row">
-            <a href="#" class="download-btn">⬇ Watch Demo</a>
+            <button
+              class="watch-demo-btn"
+              onclick="openVideoModal('Y_z6BenIxvY')"
+            >
+              ⬇ Watch Demo
+            </button>
             <button onclick="redirectToWhatsapp()" class="buy-now-btn">
               ✅ Buy Now✅
             </button>
@@ -403,7 +423,10 @@
           <div class="pricing-header">
             <h4>Enterprise Automation System</h4>
             <p>One-time payment: <strong>₹ 50K + gst for (3 month)</strong></p>
-            <p><strong>On-Going Maintainance:</strong> ₹ 10K + gst P/M</p>
+            <p>
+              <strong>On-Going Maintainance</strong>: 20% of Subscription + gst
+              P/M
+            </p>
             <span class="badge">✅ No Hidden Charges ✅</span>
           </div>
           <ul class="features">
@@ -419,9 +442,13 @@
             <li>✅ Monthly Performance Reports</li>
             <li>✅ Dedicated Support Team</li>
           </ul>
-
           <div class="btn-row">
-            <a href="#" class="download-btn">⬇ Watch DEMO</a>
+            <button
+              class="watch-demo-btn"
+              onclick="openVideoModal('Y_z6BenIxvY')"
+            >
+              ⬇ Watch Demo
+            </button>
             <button onclick="redirectToWhatsapp()" class="buy-now-btn">
               ✅ Buy Now✅
             </button>
@@ -442,7 +469,7 @@
             class="pricing-image"
           />
           <button>
-            <button onclick="redirectToWhatsapp()" href="#" class="trial-btn">
+            <button onclick="redirectToWhatsapp()" class="trial-btn">
               ⬇ Connect Now✅
             </button>
           </button>
@@ -455,14 +482,35 @@
       <img class="client-site-image" src="/images//client-site.jpeg" alt="" />
       <a
         class="client-site-link"
-        href="https://hightechwindowblinds.com/"
+        href="https://hightechwindowblinds.in/"
         target="_blank"
       >
         👉 Visit Live site here
       </a>
     </secton>
 
-    <div style="height: 120px"></div>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <p>© 2025 feelsafemarkone. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a
+            target="_blank"
+            href="https://www.feelsafemarkone.com/privacy-policy"
+            >Privacy Policy</a
+          >
+          <a
+            target="_blank"
+            href="https://www.feelsafemarkone.com/terms-and-conditon"
+            >Terms of Service</a
+          >
+          <a target="_blank" href="https://www.feelsafemarkone.com/contact-us"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <div style="height: 100px"></div>
 
     <!-- pop up form -->
     <div id="popup-form" class="modal">
@@ -496,15 +544,22 @@
             placeholder="Phone"
             required
           />
+          <input
+            class="form-input"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
           <select class="form-input" name="services" id="services" required>
             <option value="">Select Services</option>
-            <option value="lead">
+            <option value="Smart Lead Starter">
               <strong>Smart Lead Starter</strong>
             </option>
-            <option value="sales">
+            <option value="AI-Powered Lead Booster">
               <strong>AI-Powered Lead Booster</strong>
             </option>
-            <option value="both">
+            <option value="360° Sales Pro System">
               <strong>360° Sales Pro System</strong>
             </option>
           </select>
@@ -540,10 +595,10 @@
 
     <!-- whatsapp icon -->
     <a
-      href="https://wa.me/+918920898168"
+      href="https://wa.me/+918920898168?text=I%20want%20more%20customers."
+      title="Chat on WhatsApp"
       class="whatsapp-float"
       target="_blank"
-      title="Chat on WhatsApp"
     >
       <img src="/images//whatsappIcon.png" alt="WhatsApp Chat" />
     </a>
@@ -565,18 +620,28 @@
       <p>🚀 Ready to Transform Your Business?</p>
       <a onclick="redirectToWhatsapp()" class="cta-btn">Get set Automate!</a>
     </div>
-    <!--
-    <footer class="site-footer">
-      <div class="footer-container">
-        <p>© 2025 YourCompanyName. All Rights Reserved.</p>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Contact</a>
-        </div>
+
+    <div id="video-modal" class="video-modal">
+      <div class="video-container">
+        <button
+          onClick="closeVideoModal()"
+          id="dismissModalBtn"
+          class="dismiss-btn"
+        >
+          X
+        </button>
+        <iframe
+          id="video-frame"
+          width="560"
+          height="315"
+          src=""
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
-    </footer> 
-    -->
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
