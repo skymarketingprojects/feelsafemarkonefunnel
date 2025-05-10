@@ -4,23 +4,6 @@
   position: relative;
 }
 
-/* .footerTruck {
-  height: 100px;
-  position: absolute;
-  top: -89px;
-  right: -100px;
-  animation: moveTruck 35s linear infinite;
-}
-
-@keyframes moveTruck {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100vw - 100px));
-  }
-} */
-
 .footerContainer {
   background: var(--primary-theme1);
   color: var(--text-black);

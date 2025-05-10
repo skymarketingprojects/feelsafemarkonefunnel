@@ -230,3 +230,186 @@ function closeVideoModal() {
   document.getElementById("video-modal").style.display = "none";
   document.getElementById("video-frame").src = "";
 }
+
+// api for getting the country
+const getCountry = async () => {
+  try {
+    const response = await fetch("https://ipinfo.io/json");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+let country;
+(async () => {
+  country = await getCountry();
+})();
+
+const indianPlan1 = {
+  heading: "👉Get Set Automate👈",
+  planName: "Starter Automation Pack",
+  oneTimePayment: 8000,
+  onGoingMaintenance: 0,
+  features: [
+    "✅ Lead Generating Website",
+    "✅Google Review Request ",
+    "✅ WhatsApp Integration",
+    "✅ Basic Chat Bot Integration",
+    "✅ Sales Optimize Copywriting",
+    "✅ Appointment Booking link",
+    "✅ Auto Popup Lead Gen Form",
+    "✅ Offer Image",
+    "✅ News Headline Row",
+    "✅ Thankyou Message and Mail",
+  ],
+  demoVideoLink: "",
+  buyNowLink: "",
+};
+const indianPlan2 = {
+  heading: "Most Selling (400+ buyer)",
+  planName: "Growth Automation Pack",
+  oneTimePayment: 23999,
+  onGoingMaintenance: 5000,
+  features: [
+    "✅ Smart Website with Lead Forms (1 Page)",
+
+    "✅ Automated Email + SMS Follow-Up (Single Campaign)",
+
+    "✅ Online Appointment Calendar + Reminders",
+
+    "✅ WhatsApp Auto-Reply + Chatbot",
+
+    "✅ Google Review Request Automation",
+
+    "✅ Basic Lead Tracking Dashboard",
+
+    "📊 Monthly Report & 1 Support Call",
+  ],
+  demoVideoLink: "",
+  buyNowLink: "",
+};
+const indianPlan3 = {
+  heading: "Save more money then Ever",
+  planName: "360 Marketing and Sales Automation",
+  oneTimePayment: 44999,
+  onGoingMaintenance: 10000,
+  features: [
+    "✅ Everything in Starter +",
+
+    "✅ Multi-Service Funnel (up to 3 services)",
+
+    "✅ CRM Pipeline with Lead Scoring",
+
+    "✅ Re-engagement Campaign (Inactive Patients)",
+
+    "✅ Conversion-Optimized Website (3 Pages)",
+
+    "✅ Multi-channel Nurture: Email, WhatsApp, SMS",
+
+    "✅ Custom Offers & Promotions Automation",
+
+    "📊 Bi-weekly Performance Reports",
+
+    "🎯 Dedicated Automation Specialist",
+  ],
+  demoVideoLink: "",
+  buyNowLink: "",
+};
+//us plans
+const usPlan1 = {
+  heading: "👉Get Set Automate👈",
+  planName: "Starter Clinic Pack",
+  oneTimePayment: 799,
+  onGoingMaintenance: 499,
+  features: [
+    "✅ Smart Website with Lead Forms (1 Page)",
+    "✅ Automated Email + SMS Follow-Up (Single Campaign)",
+    "✅ Online Appointment Calendar + Reminders",
+    "✅ WhatsApp Auto-Reply + Chatbot",
+    "✅ Google Review Request Automation",
+    "✅ Basic Lead Tracking Dashboard",
+    "📊 Monthly Report & 1 Support Call",
+  ],
+  demoVideoLink: "",
+  buyNowLink: "",
+};
+
+const usPlan2 = {
+  heading: "Most Selling (400+ buyer)",
+  planName: "Growth Clinic Pack",
+  oneTimePayment: 1299,
+  onGoingMaintenance: 899,
+  features: [
+    "✅ Everything in Starter +",
+    "✅ Multi-Service Funnel (up to 3 services)",
+    "✅ CRM Pipeline with Lead Scoring",
+    "✅ Re-engagement Campaign (Inactive Patients)",
+    "✅ Conversion-Optimized Website (3 Pages)",
+    "✅ Multi-channel Nurture: Email, WhatsApp, SMS",
+    "✅ Custom Offers & Promotions Automation",
+    "📊 Bi-weekly Performance Reports",
+    "🎯 Dedicated Automation Specialist",
+  ],
+  demoVideoLink: "",
+  buyNowLink: "",
+};
+
+const usPlan3 = {
+  heading: "Save more money then Ever",
+  planName: "Elite Clinic Pro Pack",
+  oneTimePayment: 1999,
+  onGoingMaintenance: 1499,
+  features: [
+    "✅ Everything in Growth +",
+    "✅ Unlimited Service Funnels",
+    "✅ AI Chatbot for Pre-Consult Intake",
+    "✅ Patient Journey Mapping + SOP Automation",
+    "✅ Online Payments + Auto-Invoicing (via Stripe)",
+    "✅ Staff Activity Dashboard + Role-Based Access",
+    "✅ Advanced Re-Activation & Upsell Flows",
+    "📊 Weekly Report + Monthly Growth Strategy Call",
+    "🎯 Priority Support + Custom Onboarding",
+  ],
+  demoVideoLink: "",
+  buyNowLink: "",
+};
+country = { country: "US" };
+const plan1 = country.country === "IN" ? indianPlan1 : usPlan1;
+const plan2 = country.country === "IN" ? indianPlan2 : usPlan2;
+const plan3 = country.country === "IN" ? indianPlan3 : usPlan3;
+
+function renderPlan(plan, elementId) {
+  const container = document.getElementById(elementId);
+  console.log("this is container:", container);
+  if (!container) return;
+
+  container.innerHTML = `
+      <h3>${plan.heading}</h3>
+      <div class="pricing-header">
+        <h4>${plan.planName}</h4>
+        <p>One-time payment: <strong>${country.country === "US" ? "$" : "₹"}${
+    plan.oneTimePayment
+  }</strong></p>
+        <p><strong>On-Going Maintenance:</strong> ${
+          country.country === "US" ? "$" : "₹"
+        }${plan.onGoingMaintenance} / month</p>
+        <span class="badge">✅ No Hidden Charges ✅</span>
+      </div>
+      <ul class="features">
+        ${plan.features.map((feature) => `<li>${feature}</li>`).join("")}
+      </ul>
+      <div class="btn-row">
+        <button class="watch-demo-btn" onclick="openVideoModal('${
+          plan.demoVideoLink
+        }')">⬇ Watch Demo</button>
+        <button onclick="redirectToWhatsapp('${
+          plan.buyNowLink
+        }')" class="buy-now-btn">✅ Buy Now✅</button>
+      </div>
+    `;
+}
+console.log("this is plan1:", plan1);
+renderPlan(plan1, "pricing-box1");
+renderPlan(plan2, "pricing-box2");
+renderPlan(plan3, "pricing-box3");
