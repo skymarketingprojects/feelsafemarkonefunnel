@@ -136,7 +136,7 @@ function formModalTimer() {
     }
   };
 }
-window.onload = formModalTimer;
+// window.onload = formModalTimer;
 
 const openChat = () => {
   const modal = document.getElementById("popup-form");
@@ -186,27 +186,22 @@ function handleQuestionClick(index) {
 function handleDismiss() {
   document.getElementById("chatContainer").style.display = "none";
 }
-
 document.getElementById("closeButton").addEventListener("click", handleDismiss);
 
 let lastScrollTop = 0;
 const ctaBar = document.getElementById("bottom-cta");
-
 window.addEventListener("scroll", () => {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollTop > lastScrollTop) {
-    // Scrolling down
     ctaBar.classList.add("show");
   } else {
-    // Scrolling up
     ctaBar.classList.remove("show");
   }
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
-// aman
 function changeColor() {
   var ctaButton = document.getElementById("cta-button");
   setInterval(() => {
@@ -218,11 +213,7 @@ changeColor();
 // open video modal
 function openVideoModal(videoUrl) {
   const embedUrl = `https://www.youtube.com/embed/${videoUrl}`;
-
-  // Set the iframe source to the embed URL
   document.getElementById("video-frame").src = embedUrl;
-
-  // Show the modal
   document.getElementById("video-modal").style.display = "flex";
 }
 
@@ -244,60 +235,64 @@ const getCountry = async () => {
 
 const indianPlans = {
   plan1: {
-    heading: "👉Get Set Automate👈",
-    planName: "Starter Automation Pack",
+    heading: "Trusted by 400+ buyers ",
+    planName: "Smart Automation (Unlimited Benefits )",
     oneTimePayment: 8000,
     onGoingMaintenance: 0,
     features: [
       "✅ Lead Generating Website",
-      "✅ Google Review Request",
+      "✅ Google Reviews Booster",
       "✅ WhatsApp Integration",
-      "✅ Basic Chat Bot Integration",
-      "✅ Sales Optimize Copywriting",
+      "✅ Basic Chatbot Integration",
+      "✅ Words that convince more people",
       "✅ Appointment Booking link",
-      "✅ Auto Popup Lead Gen Form",
-      "✅ Offer Image",
-      "✅ News Headline Row",
+      "✅ Offer Popup",
+      "✅ Offer GIF",
+      "✅ Brand USP Highlighter",
       "✅ Thankyou Message and Mail",
     ],
-    demoVideoLink: "",
-    buyNowLink: "",
+    pdfPath: "./plans/Automation1.pdf",
+    buyNowLink: `Hi, I'm interested in learning more about your Smart Automation plan.  How can I get started?`,
   },
   plan2: {
-    heading: "Most Selling (400+ buyer)",
+    heading: "Used by 130+ Indian clinics",
     planName: "Growth Automation Pack",
-    oneTimePayment: 23999,
+    oneTimePayment: 12500,
     onGoingMaintenance: 5000,
     features: [
       "✅ Smart Website with Lead Forms (1 Page)",
+      "✅ Boost Google Reviews 2X Faster",
       "✅ Automated Email + SMS Follow-Up (Single Campaign)",
       "✅ Online Appointment Calendar + Reminders",
       "✅ WhatsApp Auto-Reply + Chatbot",
       "✅ Google Review Request Automation",
-      "✅ Basic Lead Tracking Dashboard",
+      "📊 Basic Lead Tracking Dashboard",
       "📊 Monthly Report & 1 Support Call",
+      "🎯 Cut manual work by 80% and get better quality clients on auto-pilot",
     ],
-    demoVideoLink: "",
-    buyNowLink: "",
+    pdfPath: "./plans/Automation2.pdf",
+    buyNowLink: `Hi, I'm interested in learning more about your Growth Automation Pack plan. How can I get started?`,
   },
   plan3: {
-    heading: "Save more money than ever",
+    heading: "₹2L /month revenue saved via automation",
     planName: "360 Marketing and Sales Automation",
-    oneTimePayment: 44999,
-    onGoingMaintenance: 10000,
+    oneTimePayment: 24999,
+    onGoingMaintenance: 9999,
     features: [
-      "✅ Everything in Starter +",
-      "✅ Multi-Service Funnel (up to 3 services)",
-      "✅ CRM Pipeline with Lead Scoring",
-      "✅ Re-engagement Campaign (Inactive Patients)",
-      "✅ Conversion-Optimized Website (3 Pages)",
+      "✅ Everything in Growth +",
+      "✅ Multiple service pages/websites",
+      "✅ Sales Pipeline with Lead Scoring",
+      "✅ Staff performance dashboard",
+      "✅ Lead reactivation flows",
+      "✅ AI chatbot for website + WhatsApp",
       "✅ Multi-channel Nurture: Email, WhatsApp, SMS",
       "✅ Custom Offers & Promotions Automation",
       "📊 Bi-weekly Performance Reports",
       "🎯 Dedicated Automation Specialist",
+      "🔥 Built for high-volume & high-quality client",
     ],
-    demoVideoLink: "",
-    buyNowLink: "",
+    pdfPath: "./plans/Automation3.pdf",
+    buyNowLink: `Hi, I'm interested in learning more about your 360 Marketing and Sales Automation plan. How can I get started?`,
   },
 };
 
@@ -360,7 +355,7 @@ const usPlans = {
   },
 };
 
-function renderPlan(plan, elementId) {
+function renderPlan(plan, elementId, country) {
   const container = document.getElementById(elementId);
   if (!container) return;
 
@@ -381,12 +376,12 @@ function renderPlan(plan, elementId) {
       ${plan.features.map((feature) => `<li>${feature}</li>`).join("")}
     </ul>
     <div class="btn-row">
-      <button class="watch-demo-btn" onclick="openVideoModal('${
-        plan.demoVideoLink
-      }')">⬇ Watch Demo</button>
-      <button onclick="redirectToWhatsapp('${
+      <button class="watch-demo-btn" onclick="downloadPDF('${
+        plan.pdfPath
+      }')">⬇ Download Detail</button>
+      <button onclick="redirectToWhatsapp(\`${
         plan.buyNowLink
-      }')" class="buy-now-btn">✅ Buy Now ✅</button>
+      }\`)" class="buy-now-btn">✅ Buy Now ✅</button>
     </div>
   `;
 }
@@ -395,9 +390,19 @@ async function initializePlans() {
   const country = await getCountry();
   const selectedPlans = country === "IN" ? indianPlans : usPlans;
 
-  renderPlan(selectedPlans.plan1, "pricing-box1");
-  renderPlan(selectedPlans.plan2, "pricing-box2");
-  renderPlan(selectedPlans.plan3, "pricing-box3");
+  renderPlan(selectedPlans.plan1, "pricing-box1", country);
+  renderPlan(selectedPlans.plan2, "pricing-box2", country);
+  renderPlan(selectedPlans.plan3, "pricing-box3", country);
 }
 
 initializePlans();
+
+// download pdf
+function downloadPDF(pdfPath) {
+  const link = document.createElement("a");
+  link.href = pdfPath;
+  link.download = pdfPath.split("/").pop(); // Extracts filename
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}

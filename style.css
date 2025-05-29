@@ -116,6 +116,19 @@ body {
   cursor: pointer;
   border-radius: 5px;
 }
+
+.cta-button-section {
+  width: 100%;
+  margin-top: 30px;
+  padding: 0.8em 0;
+  font-size: 1.3em;
+  background: var(--green-color);
+  color: var(--text-white);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
 .tagline {
   text-align: center;
   font-weight: 600;
